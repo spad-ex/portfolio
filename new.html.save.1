@@ -1,0 +1,229 @@
+export default function CyberPortfolio() {
+  const contacts = [
+    {
+      title: 'LinkedIn',
+      icon: 'in',
+      value: 'linkedin.com/in/aboobacker-sidheeq',
+    },
+    {
+      title: 'TryHackMe',
+      icon: '⚔',
+      value: 'tryhackme.com/p/Aboobacker.MP',
+    },
+    {
+      title: 'Email',
+      icon: '✉',
+      value: 'aboobackersidheeq@gmail.com',
+    },
+    {
+      title: 'GitHub',
+      icon: '</>',
+      value: 'github.com/Brook-106',
+    },
+    {
+      title: 'Hack The Box',
+      icon: '⬢',
+      value: 'HTB Profile',
+    },
+    {
+      title: 'Location',
+      icon: '⌖',
+      value: 'Kerala, India',
+    },
+  ];
+
+  const skills = [
+    'Linux',
+    'Networking',
+    'Python',
+    'Web Security',
+    'CTFs',
+    'Git',
+    'Kali Linux',
+    'OSINT',
+  ];
+
+  const projects = [
+    {
+      title: 'VulnVault Lab',
+      desc: 'Custom vulnerable web application built for practicing exploitation and web security fundamentals.',
+    },
+    {
+      title: 'Cyber Notes Hub',
+      desc: 'Structured repository of penetration testing notes, commands, walkthroughs, and scripts.',
+    },
+    {
+      title: 'Portfolio Terminal UI',
+      desc: 'Cyberpunk inspired responsive portfolio with terminal-style interactions and animated UI.',
+    },
+  ];
+
+  return (
+    <div className="bg-black text-white min-h-screen overflow-x-hidden font-mono">
+      <div className="fixed inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.15)_0,transparent_60%)]" />
+
+      <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-red-900/30 bg-black/80">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="text-3xl font-black tracking-[0.35em] text-red-500">
+            &gt;_ ABOOBACKER
+          </div>
+
+          <div className="hidden md:flex gap-10 text-sm tracking-[0.3em] uppercase">
+            <a href="#home" className="hover:text-red-500 transition">Home</a>
+            <a href="#about" className="hover:text-red-500 transition">About</a>
+            <a href="#skills" className="hover:text-red-500 transition">Skills</a>
+            <a href="#projects" className="hover:text-red-500 transition">Projects</a>
+            <a href="#contact" className="hover:text-red-500 transition">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <section
+        id="home"
+        className="max-w-7xl mx-auto min-h-[90vh] px-6 grid lg:grid-cols-2 gap-14 items-center"
+      >
+        <div>
+          <p className="text-red-500 tracking-[0.4em] uppercase mb-5 text-sm">
+            Cybersecurity Student & Ethical Hacker
+          </p>
+
+          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8">
+            BUILD.
+            <br />
+            BREAK.
+            <br />
+            SECURE.
+          </h1>
+
+          <div className="bg-zinc-950 border border-red-900/30 rounded-3xl p-6 shadow-2xl shadow-red-950/20">
+            <p className="text-zinc-400 leading-8 text-lg">
+              I focus on cybersecurity, penetration testing, Linux environments,
+              and building practical technical skills through labs, CTFs, and
+              real-world projects.
+            </p>
+
+            <div className="mt-6 space-y-2 text-zinc-300">
+              <p>&gt; Status: Learning & Building</p>
+              <p>&gt; Focus: Offensive Security + Development</p>
+              <p>&gt; Goal: Financial freedom through tech</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative flex justify-center">
+          <div className="absolute inset-0 bg-red-500/20 blur-3xl rounded-full" />
+
+          <div className="relative border border-red-900/40 rounded-[2rem] overflow-hidden shadow-[0_0_60px_rgba(255,0,0,0.15)]">
+            <img
+              src="/mnt/data/ChatGPT Image May 15, 2026, 12_34_34 AM.png"
+              alt="profile"
+              className="w-full max-w-lg object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="max-w-7xl mx-auto px-6 py-24">
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div className="bg-zinc-950 border border-red-900/30 rounded-3xl p-8">
+            <h2 className="text-4xl font-black mb-6 tracking-[0.2em] text-red-500">
+              ABOUT ME
+            </h2>
+
+            <p className="text-zinc-400 leading-8 text-lg">
+              I am a cybersecurity enthusiast from Kerala focused on learning
+              offensive security, Linux systems, networking, and secure
+              development. I enjoy solving CTF challenges, exploring real-world
+              vulnerabilities, and building projects that sharpen practical
+              skills instead of collecting useless certificates.
+            </p>
+          </div>
+
+          <div className="bg-zinc-950 border border-red-900/30 rounded-3xl p-8 flex flex-col justify-center">
+            <div className="space-y-4 text-lg text-zinc-300">
+              <p>&gt; College Student</p>
+              <p>&gt; Kali Linux User</p>
+              <p>&gt; Building Cybersecurity Portfolio</p>
+              <p>&gt; Learning by doing, not just watching tutorials</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" className="max-w-7xl mx-auto px-6 py-24">
+        <h2 className="text-center text-5xl font-black tracking-[0.3em] mb-16">
+          SKILLS
+        </h2>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {skills.map((skill) => (
+            <div
+              key={skill}
+              className="bg-zinc-950 border border-red-900/30 rounded-2xl p-6 text-center hover:-translate-y-2 transition duration-300 hover:border-red-500"
+            >
+              <p className="text-lg tracking-[0.15em]">{skill}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="projects" className="max-w-7xl mx-auto px-6 py-24">
+        <h2 className="text-center text-5xl font-black tracking-[0.3em] mb-16">
+          PROJECTS
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="bg-zinc-950 border border-red-900/30 rounded-3xl p-8 hover:border-red-500 transition"
+            >
+              <h3 className="text-2xl font-bold mb-4 text-red-500">
+                {project.title}
+              </h3>
+
+              <p className="text-zinc-400 leading-7">{project.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="max-w-7xl mx-auto px-6 py-28">
+        <h2 className="text-center text-6xl font-black tracking-[0.35em] mb-20">
+          CONTACT ME
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {contacts.map((contact) => (
+            <div
+              key={contact.title}
+              className="group bg-black border border-zinc-800 hover:border-red-500 rounded-3xl p-8 transition duration-300 hover:-translate-y-2 relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition" />
+
+              <div className="relative flex items-start gap-5">
+                <div className="w-16 h-16 rounded-2xl border border-red-900/50 flex items-center justify-center text-3xl text-white bg-zinc-950">
+                  {contact.icon}
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    {contact.title}
+                  </h3>
+
+                  <p className="text-zinc-400 break-all leading-7">
+                    {contact.value}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer className="border-t border-red-900/20 py-8 text-center text-zinc-500 tracking-[0.2em] text-sm">
+        © 2026 ABOOBACKER SIDHEEQ | BUILT WITH REACT + TAILWIND
+      </footer>
+    </div>
+  );
+}
